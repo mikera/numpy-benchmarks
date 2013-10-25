@@ -24,14 +24,21 @@ print ("Timing buildsum")
 print(bench("buildsum", "10"))
 
 
-# Multiplication (inner product) of two 20x20 matrices
-# => about 0.5 ms
+# Multiplication (inner product) of two 100x100 matrices
+# => about 0.86 ms
 
 def multiply(n): 
-	a = np.empty([n,n])
-	b = np.empty([n,n])
+	a = np.zeros([n,n])
+	b = np.zeros([n,n])
 	a = np.dot (a,b)
 	return a
 	
-print ("Timing multiply")
+print ("Timing multiply 100x100")
 print(bench("multiply", "100"))
+
+
+# Multiplication (inner product) of two 10x10 matrices
+# => about 6,400 ns
+
+print ("Timing multiply 10x10")
+print(bench("multiply", "10"))
