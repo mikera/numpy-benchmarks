@@ -13,7 +13,7 @@ def bench(name, params):
 # => about 45,000 ns
 
 def buildsum(n): 
-	a = np.empty([n,n])
+	a = np.zeros([n,n])
 	for i in range(n):
 		for j in range(n):
 			a[i,j] = i*j
