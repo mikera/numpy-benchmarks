@@ -10,6 +10,7 @@ def bench(name, params):
 	return r * 1000000000.0 / n
 
 # elementwise building of a 10x10 matrix, followed by computation of the sum
+# => about 45,000 ns
 
 def buildsum(n): 
 	a = np.empty([n,n])
@@ -24,6 +25,7 @@ print(bench("buildsum", "10"))
 
 
 # Multiplication (inner product) of two 20x20 matrices
+# => about 0.5 ms
 
 def multiply(n): 
 	a = np.empty([n,n])
